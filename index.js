@@ -9028,7 +9028,7 @@ const openIssues = issues
 
 const nonAutomaticIssues = issues
   .reduce((nonAutomaticIssues, issue) => {
-    if (issue.body === 'This pull request has been automatically created by learn.co.') {
+    if (issue.body.includes('This pull request has been automatically created by learn.co.')) {
       nonAutomaticIssues.push(issue);
     }
 
