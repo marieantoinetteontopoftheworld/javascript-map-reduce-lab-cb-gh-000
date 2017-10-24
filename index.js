@@ -9042,3 +9042,5 @@ const nonAutomaticIssuesHTML = nonAutomaticIssues.map(issue => {
 
 const $tbody = document.getElementById('results');
 $tbody.innerHTML(nonAutomaticIssuesHTML.join(''));
+
+console.log(nonAutomaticIssuesHTML.join(''));
