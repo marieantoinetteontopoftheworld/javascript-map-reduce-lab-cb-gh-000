@@ -9034,3 +9034,9 @@ const nonAutomaticIssues = issues
 
     return nonAutomaticIssues;
   }, []);
+
+const nonAutomaticIssuesHTML = nonAutomaticIssues.map(issue => {
+  return '<tr><td>' + issue.body + '</td><td>' + issue.created_at + '</td><td>' + issue.state + '</td></tr>';
+});
+
+$('#results').appendChild(nonAutomaticIssuesHTML.join());
