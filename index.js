@@ -9027,7 +9027,7 @@ const openIssues = issues
 //console.log(openIssues);
 
 const nonAutomaticIssues = issues.reduce((nonAutomaticIssues, issue) => {
-  if (issue.body.includes('automatically created by learn.co')) {
+  if (!issue.body.includes('automatically created by learn.co')) {
     nonAutomaticIssues.push(issue);
   }
 
