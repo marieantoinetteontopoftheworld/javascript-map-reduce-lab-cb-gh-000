@@ -9026,14 +9026,12 @@ const openIssues = issues
 
 //console.log(openIssues);
 
-const nonAutomaticIssues = issues.reduce((totalIssues, issue) => {
-  const isAutomaticIssue = issue.body.includes('automatically created by learn.co');
-
-  if (!isAutomaticIssue) {
-    totalIssues.push(issue);
+const nonAutomaticIssues = issues.reduce((nonAutomaticIssues, issue) => {
+  if (issue.body.includes('automatically created by learn.co')) {
+    nonAutomaticIssues.push(issue);
   }
 
-  return totalIssues;
+  return nonAutomaticIssues;
 }, []);
 
 const nonAutomaticIssuesHTML = nonAutomaticIssues.map(issue => {
